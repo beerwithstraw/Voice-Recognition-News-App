@@ -8,6 +8,11 @@ const App = () => {
     useEffect(() => {
         alanBtn({
             key: alanKey,
+            onCommand:({ command }) => {
+                if (command === 'testCommand') {
+                    alert('Alert command executed');
+                }
+            }
         })
     },[])
 
